@@ -1,0 +1,22 @@
+import React from 'react'
+
+const CategoryItem = ({category}) => {
+  return (
+      <div className='flex  w-full cursor-pointer items-center gap-4 bg-white p-2 px-5  text-gray-600
+            transition-all duration-300 ease-in-out rounded-lg hover:bg-gray-100 hover:outline hover:outline-teal-500 
+            dark:bg-gray-700 dark:text-gray-400 dark:hover:outline xl:flex-col xl:items-start xl:py-6 
+        '>
+          <img
+              src={category.image}
+              alt={category.name}
+              className='size-10 rounded-full'
+          />
+          <div>
+              <h1 className='text-xl font-bold'>{category.name}</h1>
+              <p className='text-gray-400 dark:text-white/40'> {category.quantities }</p>
+          </div>
+    </div>
+  )
+}
+
+export default CategoryItem
