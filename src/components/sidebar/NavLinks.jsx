@@ -8,9 +8,9 @@ const NavLinks = ({isOpen}) => {
             <a
                 href={item.path}
                 key={item.name}
-                className='flex items-center gap-3 rounded-md  bg-gray-600 p-2 px-3 uppercase text-gray-500 
-                hover:bg-emerald-400 hover:text-white/50 dark:hover:text-gray-100 
-                transition-all duration-300 m-1
+                className='flex items-center gap-3 rounded-md  bg-gray-100  dark:bg-gray-600 dark:text-gray-400  p-2 px-3 uppercase text-gray-900 
+                hover:bg-emerald-400 dark:hover:bg-gray-800 hover:text-white/50 dark:hover:text-gray-100 
+                transition-all  duration-300 m-1
                 '
             >
                 <span className='text-lg'>{item.icon}</span>

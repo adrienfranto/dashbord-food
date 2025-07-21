@@ -6,8 +6,8 @@ import { FaSignOutAlt } from 'react-icons/fa'
 
 const Sidebar = ({isOpen }) => {
   return (
-      <div className={`${isOpen ? "w-44" : "w-16"}  fixed left-0 top-0 h-full overflow-x-hidden text-gray-900 transition-all duration-500 ease-in-out dark:text-white
-     bg-gray-200 dark:bg-gray-950`}>
+      <div className={`${isOpen ? "w-44" : "w-16"}  fixed left-0 top-0 h-full overflow-x-hidden text-gray-900  transition-all  duration-500 ease-in-out dark:text-white
+     bg-gray-300 dark:bg-gray-950`}>
         <nav className='flex  flex-col items-center justify-between h-full p-3'>
             <div className=' flex flex-col items-center '>
                 {/* LOGO */}

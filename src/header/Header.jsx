@@ -6,7 +6,7 @@ import CartButton from './CartButton'
 
 const Header = ({darkMode,toggleDarkMode,toggleSidebar,isCartOpen,toggleCart}) => {
   return (
-   <div className={`${open } sticky top-0 z-20 bg-white p-3 dark:bg-gray-950 `}>
+   <div className={`${open } sticky top-0 z-20 bg-gray-300 p-3 dark:bg-gray-950 `}>
         <div className='flex items-center justify-between'>
               <ToggleMenuButtom
                   toggleSidebar={toggleSidebar} />

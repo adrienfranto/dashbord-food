@@ -5,7 +5,8 @@ import { useCart } from '../contexts/CartContext';
 const menuItem = ({  menuItem }) => {
   
 
-  const { cartItems, addItemToCart } = useCart();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { cartItems, addItemToCart,decreaseItemQuantity } = useCart();
   
   const inCart = cartItems.find(item => item.name === menuItem.name);
 
@@ -31,7 +32,10 @@ const menuItem = ({  menuItem }) => {
       {inCart ?
         <div className='flex justify-between  items-center gap-5 rounded-lg bg-emerald-100 p-1 px-5 
         dark:bg-gray-500  dark:text-gray-200  '>
-          <Button className="size-8 rounded-full bg-emerald-500 font-bold  text-white">-</Button>
+          <Button
+            onClick={()=>decreaseItemQuantity(menuItem.name)}
+            className="size-8 rounded-full bg-emerald-500 font-bold  text-white"
+          >-</Button>
           <span>{inCart.quantity < 10 ? `0${inCart.quantity}` : inCart.quantity}</span>
           <Button
             onClick={()=> addItemToCart(menuItem)}

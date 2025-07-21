@@ -26,13 +26,43 @@ const CartProdiver = ({ children }) => {
     }
 
     //remove item from the cart
+    const removeItemFromCart = ({itemName}) => {
+        setCartItems(prevItems =>
+            prevItems.filter((item) => item.name !== itemName));
+        
+        
+    }
     
 
     //decrease the item quantity it remove item 
+    const decreaseItemQuantity = (itemName)=>{
+        setCartItems(prevItems => {
+            return prevItems.map(item => {
+                if (item.name == itemName) {
+                    if (item.quantity > 1) {
+                        //decrease the quality if greater than 1
+                        return { ...item, quantity: item.quantity - 1 };
+                    } else {
+                        //if quantity is 1,remove the item from cart
+                        removeItemFromCart(itemName);
+                        return null
+                    }
+                }
+                return item;
+            }).filter(item => item !== null);
+
+        })
+    }
 
     //calculate the total  amount
+    const totalAmount = cartItems.reduce((total, item) => 
+        total + item.amout * item.quantity,0
+    );
+
   return (
-    <CartContext.Provider value={{cartItems,addItemToCart}}>
+      <CartContext.Provider
+          value={{ cartItems, addItemToCart,removeItemFromCart,decreaseItemQuantity,totalAmount }}
+      >
         {children}
     </CartContext.Provider>
   )

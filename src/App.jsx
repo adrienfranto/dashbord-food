@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import Sidebar from './components/sidebar/Sidebar'
 import Header from './header/Header';
 import CartSidebar from './components/cart/CartSidebar';
@@ -8,7 +8,7 @@ import CartProdiver from './contexts/CartContext';
 const App = () =>   {
   
 
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [isSiderOpen, setIsSiderOpen] = useState(true);
   const [isCartOpen, setIsCartOpen] = useState(false);
   
@@ -27,7 +27,7 @@ const App = () =>   {
   return (
     <CartProdiver>
       <div className={`${darkMode ? "dark" : ""}`}>
-      <div className='flex bg-white transition-all duration-300 ease-in-out dark:bg-gray-950'>
+      <div className='flex bg-gray-300 transition-all duration-300 ease-in-out dark:bg-gray-950'>
         {/* SIDEBAR */}
         <Sidebar
           isOpen={isSiderOpen}
