@@ -8,7 +8,7 @@ const Header = ({darkMode,toggleDarkMode,toggleSidebar,isSiderOpen,isCartOpen,to
   return (
    <div className={`${open } fixed w-screen right-0 top-0 z-10 bg-gray-300 p-3 dark:bg-gray-950 `}>
         <div className='flex items-center justify-between'>
-             <div className={`${isSiderOpen ? 'ml-52' : "ml-20 transition-all  duration-500 ease-in-out"}`}>
+             <div className={`${isSiderOpen ? 'ml-48' : "ml-20 "} transition-all duration-500`}>
                 <ToggleMenuButtom 
                   toggleSidebar={toggleSidebar}  />
              </div>

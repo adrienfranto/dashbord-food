@@ -34,15 +34,15 @@ const App = () =>   {
         />
 
         {/* Content */}
-        <div className={`${isSiderOpen ? "ml-44" : "ml-16"} flex-1 duration-500 ease-in-out  dark:text-white  `}>
+        <div className={`${isSiderOpen ? "ml-44" : "ml-16"} flex-1 duration-500 ease-in-out  dark:text-white  mt-20`}>
           
           {/* HEADER */}
           <Header
             darkMode={darkMode}
             toggleDarkMode={toggleDarkMode}
             toggleSidebar={toggleSidebar}
-            isCartOpen={isCartOpen}
             isSiderOpen={isSiderOpen}
+            isCartOpen={isCartOpen}
             toggleCart={toggleCart}
           />
           
