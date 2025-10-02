@@ -43,7 +43,7 @@ const CartSidebar = ({ isCartOpen, toggleCart }) => {
             <span className='font-normal text-xl'> ${ totalAmount }</span>
               </p>
               <button
-                className='mt-5 w-full bg-gray-200 p-2 border border-gray-300 rounded-md'
+                className='mt-5 w-full bg-gray-200 p-2 border border-gray-300 dark:bg-gray-800 rounded-md'
               >
                 Checkout
               </button>

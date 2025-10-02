@@ -4,7 +4,7 @@ import CategoryItem from './CategoryItem'
 
 const Category = () => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 xl:grid-cols-8 gap-5'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 xl:grid-cols-8  gap-5'>
       {categories.map((category) => (
         <CategoryItem
           key={category.name}
