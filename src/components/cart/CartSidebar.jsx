@@ -36,16 +36,16 @@ const CartSidebar = ({ isCartOpen, toggleCart }) => {
               </div>
           )}
         </div>
-          <div className='overflow-hidden border-t  border-gray-200 p-4 dark:border-gray-700'> 
+          <div className='overflow-hidden border-t  border-gray-200 p-4 dark:border-gray-700 '> 
             
-              <p className='text-lg font-semibold flex  items-center justify-between'>
+              <p className=' text-lg font-semibold flex  items-center justify-between'>
                 Total Amount: 
             <span className='font-normal text-xl'> ${ totalAmount }</span>
               </p>
               <button
-                className='mt-5 w-full bg-gray-900 p-2 border border-gray-500 rounded-md'
+                className='mt-5 w-full bg-gray-200 p-2 border border-gray-300 rounded-md'
               >
-                Checkout1
+                Checkout
               </button>
           </div>
         
